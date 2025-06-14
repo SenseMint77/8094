@@ -39,9 +39,9 @@ class PropagationEncoder(nn.Module):
         return F.log_softmax(pred, dim=-1)
 
 
-class HGFND(nn.Module):
+class HGNN(nn.Module):
     def __init__(self, args):
-        super(HGFND, self).__init__()
+        super(HGNN, self).__init__()
         self.hidden_size = args.hiddenSize
         self.out_channels = args.num_classes
         self.hypergraph_embedding = NewsHypergraph(args, self.hidden_size, self.out_channels)
